@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREE-EARNING</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 22px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 7px;
+    }
+
+    header p {
+      color: #cbd5e1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px 15px;
+    }
+
+    .balance {
+      background: white;
+      border-radius: 15px;
+      padding: 22px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+
+    .balance h2 {
+      color: #16a34a;
+      font-size: 30px;
+      margin-top: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 22px 15px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .card p {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      border: none;
+      background: #2563eb;
+      color: white;
+      padding: 11px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .deposit {
+      margin-top: 20px;
+      background: white;
+      padding: 22px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .deposit h2 {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 10px;
+      color: #64748b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>FREE-EARNING</h1>
+    <p>অনলাইনে আয় করার সহজ প্ল্যাটফর্ম</p>
+  </header>
+
+  <div class="container">
+
+    <div class="balance">
+      <p>আপনার ব্যালেন্স</p>
+      <h2>৳ 0.00</h2>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div style="font-size:35px;">🎁</div>
+        <h3>Daily Bonus</h3>
+        <p>প্রতিদিন বোনাস সংগ্রহ করুন</p>
+        <button onclick="bonus()">Claim Now</button>
+      </div>
+
+      <div class="card">
+        <div style="font-size:35px;">▶️</div>
+        <h3>Watch & Earn</h3>
+        <p>ভিডিও দেখে আয় করুন</p>
+        <button onclick="earn('Watch & Earn')">Start</button>
+      </div>
+
+      <div class="card">
+        <div style="font-size:35px;">📝</div>
+        <h3>Tasks</h3>
+        <p>সহজ কাজ সম্পন্ন করে আয় করুন</p>
+        <button onclick="earn('Tasks')">Start</button>
+      </div>
+
+      <div class="card">
+        <div style="font-size:35px;">👥</div>
+        <h3>Refer & Earn</h3>
+        <p>বন্ধুদের রেফার করে আয় করুন</p>
+        <button onclick="refer()">Refer</button>
+      </div>
+
+    </div>
+
+    <div class="deposit">
+      <h2>💰 Deposit</h2>
+      <p style="margin-bottom:15px;">
+        আপনার অ্যাকাউন্টে টাকা যোগ করার জন্য Deposit অপশন ব্যবহার করুন।
+      </p>
+      <button onclick="deposit()">Deposit Now</button>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 FREE-EARNING. All Rights Reserved.
+  </footer>
+
+  <script>
+    function bonus() {
+      alert("Daily Bonus বর্তমানে প্রস্তুত করা হচ্ছে।");
+    }
+
+    function earn(type) {
+      alert(type + " অপশনটি বর্তমানে প্রস্তুত করা হচ্ছে।");
+    }
+
+    function refer() {
+      alert("Referral System বর্তমানে প্রস্তুত করা হচ্ছে।");
+    }
+
+    function deposit() {
+      alert("Deposit System বর্তমানে প্রস্তুত করা হচ্ছে।");
+    }
+  </script>
+
+</body>
+</html>
