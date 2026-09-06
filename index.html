@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FREE EARNING</title>
+<title>FREE-EARNING</title>
 
 <style>
 *{
@@ -12,279 +12,113 @@
   padding:0;
   font-family:Arial,sans-serif;
 }
-
 body{
   background:#f4f7fb;
   color:#222;
 }
-
 header{
   background:#111827;
   color:white;
-  padding:20px 15px;
+  padding:15px;
   text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10;
 }
-
-.logo{
-  width:70px;
-  height:70px;
-  margin:auto;
-  border-radius:50%;
-  background:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:34px;
-}
-
-header h1{
-  margin-top:10px;
-  font-size:26px;
-}
-
-header p{
-  margin-top:6px;
-  color:#cbd5e1;
-}
-
+header h1{font-size:23px}
 .container{
-  max-width:900px;
+  max-width:1000px;
   margin:auto;
-  padding:18px;
+  padding:15px;
 }
-
-.login-box{
-  max-width:430px;
-  margin:30px auto;
+.card{
   background:white;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 5px 20px rgba(0,0,0,.12);
+  padding:18px;
+  border-radius:14px;
+  margin-bottom:15px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
-
-.login-box h2{
-  text-align:center;
-  margin-bottom:20px;
-}
-
-.form-group{
-  margin-bottom:14px;
-}
-
-label{
-  display:block;
-  font-weight:bold;
-  font-size:14px;
-  margin-bottom:7px;
-}
-
 input,select{
   width:100%;
-  padding:13px;
-  border:1px solid #d1d5db;
-  border-radius:9px;
+  padding:12px;
+  margin:7px 0;
+  border:1px solid #ddd;
+  border-radius:8px;
   font-size:15px;
-  outline:none;
 }
-
-input:focus{
-  border-color:#16a34a;
-}
-
 button{
   border:0;
-  border-radius:9px;
-  padding:12px 18px;
+  padding:11px 16px;
+  border-radius:8px;
+  cursor:pointer;
+  background:#2563eb;
   color:white;
-  background:#16a34a;
-  font-size:15px;
-  cursor:pointer;
-}
-
-button:active{
-  transform:scale(.97);
-}
-
-.full{
-  width:100%;
-}
-
-.switch{
-  text-align:center;
-  margin-top:15px;
-  font-size:14px;
-}
-
-.switch span{
-  color:#2563eb;
-  cursor:pointer;
   font-weight:bold;
 }
-
-.error{
-  color:#dc2626;
-  text-align:center;
-  margin-top:10px;
-  font-size:14px;
-}
-
-.hidden{
-  display:none!important;
-}
-
-.balance{
-  background:linear-gradient(135deg,#16a34a,#15803d);
-  color:white;
-  border-radius:18px;
-  padding:22px;
-  text-align:center;
-  margin-bottom:18px;
-  box-shadow:0 5px 18px rgba(0,0,0,.15);
-}
-
-.balance h2{
-  font-size:16px;
-  margin-bottom:8px;
-}
-
-.money{
-  font-size:32px;
-  font-weight:bold;
-}
-
-.userbar{
+button:hover{opacity:.9}
+nav{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:10px;
   background:white;
-  padding:14px;
+  border-bottom:1px solid #ddd;
+}
+nav button{
+  white-space:nowrap;
+  background:#e5e7eb;
+  color:#111827;
+}
+nav button.active{
+  background:#2563eb;
+  color:white;
+}
+.hidden{display:none!important}
+.center{text-align:center}
+.balance{
+  font-size:30px;
+  font-weight:bold;
+  color:#16a34a;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;
+}
+.stat{
+  background:#fff;
+  padding:18px;
   border-radius:12px;
-  margin-bottom:15px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+.stat h3{font-size:14px;color:#666}
+.stat p{font-size:23px;font-weight:bold;margin-top:7px}
+.task{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 3px 10px rgba(0,0,0,.08);
+  gap:10px;
+  border:1px solid #eee;
+  padding:13px;
+  border-radius:10px;
+  margin:8px 0;
 }
-
-.logout{
-  background:#dc2626;
-  padding:9px 13px;
+.task button{background:#16a34a}
+.small{
+  color:#666;
   font-size:13px;
 }
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  margin-bottom:20px;
+.logout{background:#dc2626}
+.error{color:#dc2626;margin:8px 0}
+.success{color:#16a34a;margin:8px 0}
+.auth{
+  max-width:430px;
+  margin:35px auto;
 }
-
-.card{
-  background:white;
-  padding:20px 12px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
+a{
+  color:#2563eb;
   cursor:pointer;
-}
-
-.card:active{
-  transform:scale(.97);
-}
-
-.icon{
-  font-size:31px;
-  margin-bottom:8px;
-}
-
-.card h3{
-  font-size:16px;
-  margin-bottom:5px;
-}
-
-.card p{
-  font-size:12px;
-  color:#666;
-}
-
-.section{
-  background:white;
-  border-radius:16px;
-  padding:18px;
-  margin-bottom:18px;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-.section h2{
-  margin-bottom:14px;
-  font-size:20px;
-}
-
-.task{
-  border:1px solid #e5e7eb;
-  border-radius:12px;
-  padding:15px;
-  margin-bottom:10px;
-}
-
-.task-title{
-  font-weight:bold;
-  margin-bottom:5px;
-}
-
-.task p{
-  color:#666;
-  font-size:13px;
-  margin-bottom:10px;
-}
-
-.info{
-  background:#eff6ff;
-  border-left:4px solid #2563eb;
-  padding:12px;
-  border-radius:7px;
-  font-size:13px;
-  margin-bottom:14px;
-}
-
-.blue{
-  background:#2563eb;
-}
-
-.orange{
-  background:#ea580c;
-}
-
-.red{
-  background:#dc2626;
-}
-
-.history-item{
-  border-bottom:1px solid #eee;
-  padding:12px 0;
-  font-size:14px;
-}
-
-.history-item:last-child{
-  border-bottom:0;
-}
-
-footer{
-  text-align:center;
-  padding:25px 10px;
-  color:#777;
-  font-size:13px;
-}
-
-@media(max-width:500px){
-  .container{
-    padding:12px;
-  }
-
-  .grid{
-    gap:9px;
-  }
-
-  .card{
-    padding:17px 8px;
-  }
+  text-decoration:none;
 }
 </style>
 </head>
@@ -292,463 +126,528 @@ footer{
 <body>
 
 <header>
-  <div class="logo">💰</div>
-  <h1>FREE EARNING</h1>
-  <p>অনলাইনে কাজ করুন এবং আয় করুন</p>
+  <h1>FREE-EARNING</h1>
+  <div id="userHeader" class="small" style="color:#ddd"></div>
 </header>
 
 <!-- LOGIN -->
-
 <div id="loginPage" class="container">
-  <div class="login-box">
-    <h2>🔐 Login</h2>
-
-    <div class="form-group">
-      <label>Mobile / Email</label>
-      <input id="loginUser" type="text" placeholder="Mobile অথবা Email">
-    </div>
-
-    <div class="form-group">
-      <label>Password</label>
-      <input id="loginPass" type="password" placeholder="Password">
-    </div>
-
-    <button class="full" onclick="login()">Login</button>
-
-    <div id="loginError" class="error"></div>
-
-    <div class="switch">
-      Account নেই?
-      <span onclick="showRegister()">Register করুন</span>
-    </div>
+  <div class="card auth">
+    <h2 class="center">Login</h2>
+    <br>
+    <input id="loginEmail" type="email" placeholder="Email">
+    <input id="loginPassword" type="password" placeholder="Password">
+    <div id="loginMsg" class="error"></div>
+    <button style="width:100%" onclick="login()">Login</button>
+    <br><br>
+    <p class="center">Account নেই? <a onclick="showRegister()">Register</a></p>
   </div>
 </div>
 
 <!-- REGISTER -->
-
 <div id="registerPage" class="container hidden">
-  <div class="login-box">
-    <h2>📝 Register</h2>
-
-    <div class="form-group">
-      <label>Full Name</label>
-      <input id="regName" type="text" placeholder="আপনার নাম">
-    </div>
-
-    <div class="form-group">
-      <label>Mobile / Email</label>
-      <input id="regUser" type="text" placeholder="Mobile অথবা Email">
-    </div>
-
-    <div class="form-group">
-      <label>Password</label>
-      <input id="regPass" type="password" placeholder="Password">
-    </div>
-
-    <div class="form-group">
-      <label>Confirm Password</label>
-      <input id="regPass2" type="password" placeholder="আবার Password দিন">
-    </div>
-
-    <button class="full" onclick="register()">Create Account</button>
-
-    <div id="registerError" class="error"></div>
-
-    <div class="switch">
-      আগে থেকেই Account আছে?
-      <span onclick="showLogin()">Login করুন</span>
-    </div>
+  <div class="card auth">
+    <h2 class="center">Create Account</h2>
+    <br>
+    <input id="regName" type="text" placeholder="Full Name">
+    <input id="regEmail" type="email" placeholder="Email">
+    <input id="regPassword" type="password" placeholder="Password">
+    <input id="regConfirm" type="password" placeholder="Confirm Password">
+    <div id="regMsg" class="error"></div>
+    <button style="width:100%" onclick="register()">Register</button>
+    <br><br>
+    <p class="center">Already have account? <a onclick="showLogin()">Login</a></p>
   </div>
 </div>
 
-<!-- DASHBOARD -->
+<!-- APP -->
+<div id="app" class="hidden">
 
-<div id="dashboard" class="container hidden">
+<nav>
+  <button id="mHome" onclick="showPage('home')" class="active">🏠 Home</button>
+  <button id="mTasks" onclick="showPage('tasks')">📋 Tasks</button>
+  <button id="mEarn" onclick="showPage('earn')">💰 Earnings</button>
+  <button id="mDeposit" onclick="showPage('deposit')">💳 Deposit</button>
+  <button id="mWithdraw" onclick="showPage('withdraw')">💸 Withdraw</button>
+  <button id="mProfile" onclick="showPage('profile')">👤 Profile</button>
+  <button onclick="logout()" class="logout">Logout</button>
+</nav>
 
-  <div class="userbar">
-    <div>👤 <b id="welcomeName">User</b></div>
-    <button class="logout" onclick="logout()">Logout</button>
-  </div>
+<div class="container">
 
-  <div class="balance">
-    <h2>আপনার ব্যালেন্স</h2>
-    <div class="money">৳ <span id="balance">0.00</span></div>
-    <p>Available Balance</p>
+<!-- HOME -->
+<section id="home" class="page">
+  <div class="card">
+    <h2>Welcome, <span id="homeName"></span> 👋</h2>
+    <br>
+    <p>Your Balance</p>
+    <div class="balance">৳ <span id="homeBalance">0.00</span></div>
   </div>
 
   <div class="grid">
-
-    <div class="card" onclick="openSection('deposit')">
-      <div class="icon">💳</div>
-      <h3>Deposit</h3>
-      <p>ব্যালেন্স যোগ করুন</p>
+    <div class="stat">
+      <h3>Available Balance</h3>
+      <p>৳ <span id="statBalance">0</span></p>
     </div>
-
-    <div class="card" onclick="openSection('withdraw')">
-      <div class="icon">💸</div>
-      <h3>Withdraw</h3>
-      <p>টাকা উত্তোলন করুন</p>
+    <div class="stat">
+      <h3>Total Earned</h3>
+      <p>৳ <span id="statEarned">0</span></p>
     </div>
-
-    <div class="card" onclick="openSection('tasks')">
-      <div class="icon">📋</div>
-      <h3>Work / Tasks</h3>
-      <p>কাজ করে আয় করুন</p>
+    <div class="stat">
+      <h3>Completed Tasks</h3>
+      <p><span id="statTasks">0</span></p>
     </div>
-
-    <div class="card" onclick="openSection('referral')">
-      <div class="icon">👥</div>
-      <h3>Referral</h3>
-      <p>বন্ধু Invite করুন</p>
-    </div>
-
   </div>
 
-  <!-- DEPOSIT -->
+  <div class="card">
+    <h3>📢 Notice</h3>
+    <br>
+    <p class="small">
+      Daily tasks complete করে available earning balance বাড়াতে পারবে।
+      Withdrawal করার আগে প্রয়োজনীয় তথ্য সঠিকভাবে দাও।
+    </p>
+  </div>
+</section>
 
-  <div id="deposit" class="section hidden">
+<!-- TASKS -->
+<section id="tasks" class="page hidden">
+  <div class="card">
+    <h2>📋 Daily Tasks</h2>
+    <p class="small">প্রতিটি task একবার করে complete করা যাবে।</p>
+    <br>
+    <div id="taskList"></div>
+  </div>
+</section>
+
+<!-- EARNINGS -->
+<section id="earn" class="page hidden">
+  <div class="card">
+    <h2>💰 Earnings</h2>
+    <br>
+    <div class="balance">৳ <span id="earningBalance">0</span></div>
+    <br>
+    <p>Total earned: ৳ <span id="earningTotal">0</span></p>
+    <p>Completed tasks: <span id="earningTasks">0</span></p>
+  </div>
+</section>
+
+<!-- DEPOSIT -->
+<section id="deposit" class="page hidden">
+  <div class="card">
     <h2>💳 Deposit</h2>
+    <p class="small">
+      Deposit information এখানে দেখাবে। কোনো টাকা পাঠানোর আগে
+      payment details ভালোভাবে যাচাই করো।
+    </p>
+    <br>
 
-    <div class="info">
-      এটি Demo Deposit System। বাস্তব টাকা নেওয়ার জন্য Payment Gateway সংযোগ করতে হবে।
-    </div>
+    <label>Payment Method</label>
+    <select id="depositMethod">
+      <option>bKash</option>
+      <option>Nagad</option>
+      <option>Rocket</option>
+    </select>
 
-    <div class="form-group">
-      <label>Payment Method</label>
-      <select id="depositMethod">
-        <option>bKash</option>
-        <option>Nagad</option>
-        <option>Rocket</option>
-      </select>
-    </div>
+    <input id="depositAmount" type="number" min="1" placeholder="Amount">
+    <input id="depositTrx" type="text" placeholder="Transaction ID">
 
-    <div class="form-group">
-      <label>Amount</label>
-      <input id="depositAmount" type="number" placeholder="যেমন: 500">
-    </div>
-
-    <div class="form-group">
-      <label>Transaction ID</label>
-      <input id="transactionId" type="text" placeholder="Transaction ID">
-    </div>
-
-    <button onclick="depositRequest()">Submit Deposit</button>
+    <div id="depositMsg"></div>
+    <button onclick="submitDeposit()">Submit Deposit Request</button>
   </div>
+</section>
 
-  <!-- WITHDRAW -->
-
-  <div id="withdraw" class="section hidden">
+<!-- WITHDRAW -->
+<section id="withdraw" class="page hidden">
+  <div class="card">
     <h2>💸 Withdraw</h2>
+    <br>
+    <p>Available Balance: <b>৳ <span id="withdrawBalance">0</span></b></p>
+    <br>
 
-    <div class="info">
-      Minimum Withdraw: ৳100
-    </div>
+    <select id="withdrawMethod">
+      <option>bKash</option>
+      <option>Nagad</option>
+      <option>Rocket</option>
+    </select>
 
-    <div class="form-group">
-      <label>Payment Method</label>
-      <select id="withdrawMethod">
-        <option>bKash</option>
-        <option>Nagad</option>
-        <option>Rocket</option>
-      </select>
-    </div>
+    <input id="withdrawNumber" type="text" placeholder="Payment Number">
+    <input id="withdrawAmount" type="number" min="1" placeholder="Amount">
 
-    <div class="form-group">
-      <label>Account Number</label>
-      <input id="withdrawNumber" type="text" placeholder="01XXXXXXXXX">
-    </div>
-
-    <div class="form-group">
-      <label>Amount</label>
-      <input id="withdrawAmount" type="number" placeholder="যেমন: 100">
-    </div>
-
-    <button class="red" onclick="withdrawRequest()">
-      Withdraw Request
-    </button>
+    <div id="withdrawMsg"></div>
+    <button onclick="submitWithdraw()">Withdraw Request</button>
   </div>
+</section>
 
-  <!-- TASKS -->
-
-  <div id="tasks" class="section hidden">
-    <h2>📋 Work / Tasks</h2>
-
-    <div class="task">
-      <div class="task-title">Daily Check-in</div>
-      <p>প্রতিদিন Check-in করে রিওয়ার্ড নিন।</p>
-      <button onclick="completeTask(this,5)">Complete +৳5</button>
-    </div>
-
-    <div class="task">
-      <div class="task-title">Website Visit</div>
-      <p>Website Visit Task সম্পন্ন করুন।</p>
-      <button class="blue" onclick="completeTask(this,10)">
-        Complete +৳10
-      </button>
-    </div>
-
-    <div class="task">
-      <div class="task-title">Simple Work</div>
-      <p>সহজ কাজ সম্পন্ন করে আয় করুন।</p>
-      <button class="orange" onclick="completeTask(this,15)">
-        Complete +৳15
-      </button>
-    </div>
-
+<!-- PROFILE -->
+<section id="profile" class="page hidden">
+  <div class="card">
+    <h2>👤 Profile</h2>
+    <br>
+    <p><b>Name:</b> <span id="profileName"></span></p>
+    <p><b>Email:</b> <span id="profileEmail"></span></p>
+    <br>
+    <button onclick="logout()" class="logout">Logout</button>
   </div>
-
-  <!-- REFERRAL -->
-
-  <div id="referral" class="section hidden">
-    <h2>👥 Referral</h2>
-
-    <div class="info">
-      আপনার Referral Link বন্ধুদের সাথে শেয়ার করুন।
-    </div>
-
-    <input id="refLink" readonly>
-
-    <br><br>
-
-    <button onclick="copyReferral()">Copy Referral Link</button>
-  </div>
-
-  <!-- HISTORY -->
-
-  <div id="history" class="section">
-    <h2>📜 Activity</h2>
-    <div id="historyList">
-      <p style="color:#777">কোনো Activity নেই।</p>
-    </div>
-  </div>
+</section>
 
 </div>
-
-<footer>
-  © 2026 FREE EARNING<br>
-  Demo Earning Platform
-</footer>
+</div>
 
 <script>
+const TASKS = [
+  "Daily Check-in",
+  "Visit Website",
+  "Read Article",
+  "Watch Video",
+  "Simple Survey",
+  "Social Media Task",
+  "App Review",
+  "Product Research",
+  "Search Task",
+  "Daily Bonus",
+  "Content Task",
+  "Data Entry",
+  "Website Review",
+  "Feedback Task",
+  "Quiz Task",
+  "Image Task",
+  "Typing Task",
+  "Research Task",
+  "Bonus Task",
+  "Final Daily Task"
+];
 
-let currentUser = localStorage.getItem("currentUser");
+let currentUser = null;
 
 function getUsers(){
-  return JSON.parse(localStorage.getItem("users") || "{}");
+  return JSON.parse(localStorage.getItem("free_users") || "[]");
 }
 
 function saveUsers(users){
-  localStorage.setItem("users", JSON.stringify(users));
+  localStorage.setItem("free_users", JSON.stringify(users));
+}
+
+function showLogin(){
+  document.getElementById("loginPage").classList.remove("hidden");
+  document.getElementById("registerPage").classList.add("hidden");
+  document.getElementById("app").classList.add("hidden");
 }
 
 function showRegister(){
   document.getElementById("loginPage").classList.add("hidden");
   document.getElementById("registerPage").classList.remove("hidden");
-}
-
-function showLogin(){
-  document.getElementById("registerPage").classList.add("hidden");
-  document.getElementById("loginPage").classList.remove("hidden");
+  document.getElementById("app").classList.add("hidden");
 }
 
 function register(){
+  const name = document.getElementById("regName").value.trim();
+  const email = document.getElementById("regEmail").value.trim().toLowerCase();
+  const password = document.getElementById("regPassword").value;
+  const confirm = document.getElementById("regConfirm").value;
+  const msg = document.getElementById("regMsg");
 
-  const name=document.getElementById("regName").value.trim();
-  const user=document.getElementById("regUser").value.trim();
-  const pass=document.getElementById("regPass").value;
-  const pass2=document.getElementById("regPass2").value;
-  const error=document.getElementById("registerError");
+  msg.className = "error";
 
-  if(!name || !user || !pass){
-    error.innerText="সব ঘর পূরণ করুন।";
+  if(!name || !email || !password || !confirm){
+    msg.textContent = "সব ঘর পূরণ করো।";
     return;
   }
 
-  if(pass.length < 4){
-    error.innerText="Password কমপক্ষে 4 অক্ষরের দিন।";
+  if(!email.includes("@")){
+    msg.textContent = "সঠিক email দাও।";
     return;
   }
 
-  if(pass !== pass2){
-    error.innerText="Password মিলছে না।";
+  if(password.length < 4){
+    msg.textContent = "Password কমপক্ষে 4 characters দাও।";
     return;
   }
 
-  const users=getUsers();
-
-  if(users[user]){
-    error.innerText="এই Mobile/Email দিয়ে Account আছে।";
+  if(password !== confirm){
+    msg.textContent = "Password মিলছে না।";
     return;
   }
 
-  users[user]={
-    name:name,
-    password:pass,
-    balance:0,
-    history:[]
+  const users = getUsers();
+
+  if(users.some(u => u.email === email)){
+    msg.textContent = "এই email দিয়ে আগে থেকেই account আছে।";
+    return;
+  }
+
+  const user = {
+    id: Date.now(),
+    name,
+    email,
+    password,
+    balance: 0,
+    totalEarned: 0,
+    completedTasks: [],
+    deposits: [],
+    withdrawals: []
   };
 
+  users.push(user);
   saveUsers(users);
 
-  alert("Registration সফল হয়েছে!");
+  msg.className = "success";
+  msg.textContent = "Registration সফল হয়েছে। Login করো।";
 
-  document.getElementById("regName").value="";
-  document.getElementById("regUser").value="";
-  document.getElementById("regPass").value="";
-  document.getElementById("regPass2").value="";
-  error.innerText="";
-
-  showLogin();
+  setTimeout(showLogin, 700);
 }
 
 function login(){
+  const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+  const password = document.getElementById("loginPassword").value;
+  const msg = document.getElementById("loginMsg");
 
-  const user=document.getElementById("loginUser").value.trim();
-  const pass=document.getElementById("loginPass").value;
-  const error=document.getElementById("loginError");
+  const users = getUsers();
+  const user = users.find(
+    u => u.email === email && u.password === password
+  );
 
-  const users=getUsers();
-
-  if(!users[user] || users[user].password !== pass){
-    error.innerText="Mobile/Email অথবা Password ভুল।";
+  if(!user){
+    msg.textContent = "Email অথবা password ভুল।";
     return;
   }
 
-  currentUser=user;
-  localStorage.setItem("currentUser",user);
+  currentUser = user;
+  localStorage.setItem("free_current_user", String(user.id));
 
-  error.innerText="";
-
-  showDashboard();
+  openApp();
 }
 
-function showDashboard(){
+function openApp(){
+  document.getElementById("loginPage").classList.add("hidden");
+  document.getElementById("registerPage").classList.add("hidden");
+  document.getElementById("app").classList.remove("hidden");
 
-  const users=getUsers();
+  updateUI();
+  showPage("home");
+}
 
-  if(!currentUser || !users[currentUser]){
+function logout(){
+  currentUser = null;
+  localStorage.removeItem("free_current_user");
+  showLogin();
+}
+
+function loadCurrentUser(){
+  const id = Number(localStorage.getItem("free_current_user"));
+
+  if(!id){
     showLogin();
     return;
   }
 
-  document.getElementById("loginPage").classList.add("hidden");
-  document.getElementById("registerPage").classList.add("hidden");
-  document.getElementById("dashboard").classList.remove("hidden");
+  const user = getUsers().find(u => u.id === id);
 
-  document.getElementById("welcomeName").innerText=users[currentUser].name;
-
-  updateBalance();
-  loadHistory();
-
-  const link=location.href.split("#")[0]+"?ref="+encodeURIComponent(currentUser);
-  document.getElementById("refLink").value=link;
-}
-
-function logout(){
-
-  localStorage.removeItem("currentUser");
-  currentUser=null;
-
-  document.getElementById("dashboard").classList.add("hidden");
-  document.getElementById("loginPage").classList.remove("hidden");
-}
-
-function updateBalance(){
-
-  const users=getUsers();
-
-  if(users[currentUser]){
-    document.getElementById("balance").innerText =
-      Number(users[currentUser].balance || 0).toFixed(2);
-  }
-}
-
-function openSection(id){
-
-  document.querySelectorAll(".section").forEach(function(x){
-    if(x.id !== "history"){
-      x.classList.add("hidden");
-    }
-  });
-
-  document.getElementById(id).classList.remove("hidden");
-
-  document.getElementById(id).scrollIntoView({
-    behavior:"smooth"
-  });
-}
-
-function addHistory(text){
-
-  const users=getUsers();
-
-  if(!users[currentUser].history){
-    users[currentUser].history=[];
-  }
-
-  users[currentUser].history.unshift({
-    text:text,
-    time:new Date().toLocaleString("bn-BD")
-  });
-
-  users[currentUser].history =
-    users[currentUser].history.slice(0,20);
-
-  saveUsers(users);
-  loadHistory();
-}
-
-function loadHistory(){
-
-  const users=getUsers();
-  const list=document.getElementById("historyList");
-
-  if(!users[currentUser] ||
-     !users[currentUser].history ||
-     users[currentUser].history.length===0){
-
-    list.innerHTML='<p style="color:#777">কোনো Activity নেই।</p>';
+  if(!user){
+    localStorage.removeItem("free_current_user");
+    showLogin();
     return;
   }
 
-  list.innerHTML="";
+  currentUser = user;
+  openApp();
+}
 
-  users[currentUser].history.forEach(function(item){
+function updateUser(updated){
+  const users = getUsers();
+  const index = users.findIndex(u => u.id === updated.id);
 
-    const div=document.createElement("div");
-    div.className="history-item";
+  if(index !== -1){
+    users[index] = updated;
+    saveUsers(users);
+  }
 
-    div.innerHTML=
-      "<b>"+item.text+"</b><br>"+
-      "<small>"+item.time+"</small>";
+  currentUser = updated;
+}
+
+function updateUI(){
+  if(!currentUser) return;
+
+  document.getElementById("userHeader").textContent =
+    currentUser.name + " • " + currentUser.email;
+
+  document.getElementById("homeName").textContent = currentUser.name;
+
+  document.getElementById("homeBalance").textContent =
+    Number(currentUser.balance).toFixed(2);
+
+  document.getElementById("statBalance").textContent =
+    Number(currentUser.balance).toFixed(2);
+
+  document.getElementById("statEarned").textContent =
+    Number(currentUser.totalEarned).toFixed(2);
+
+  document.getElementById("statTasks").textContent =
+    currentUser.completedTasks.length;
+
+  document.getElementById("earningBalance").textContent =
+    Number(currentUser.balance).toFixed(2);
+
+  document.getElementById("earningTotal").textContent =
+    Number(currentUser.totalEarned).toFixed(2);
+
+  document.getElementById("earningTasks").textContent =
+    currentUser.completedTasks.length;
+
+  document.getElementById("withdrawBalance").textContent =
+    Number(currentUser.balance).toFixed(2);
+
+  document.getElementById("profileName").textContent =
+    currentUser.name;
+
+  document.getElementById("profileEmail").textContent =
+    currentUser.email;
+
+  renderTasks();
+}
+
+function renderTasks(){
+  const list = document.getElementById("taskList");
+  list.innerHTML = "";
+
+  TASKS.forEach((task, index) => {
+    const done = currentUser.completedTasks.includes(index);
+
+    const div = document.createElement("div");
+    div.className = "task";
+
+    div.innerHTML = `
+      <div>
+        <b>${index + 1}. ${task}</b>
+        <div class="small">Reward: ৳1.00</div>
+      </div>
+      <button
+        ${done ? "disabled" : ""}
+        onclick="completeTask(${index})">
+        ${done ? "Completed ✓" : "Complete"}
+      </button>
+    `;
 
     list.appendChild(div);
   });
 }
 
-function completeTask(button,amount){
+function completeTask(index){
+  if(!currentUser) return;
 
-  button.disabled=true;
-  button.innerText="Completed ✓";
+  if(currentUser.completedTasks.includes(index)){
+    return;
+  }
 
-  const users=getUsers();
+  currentUser.completedTasks.push(index);
+  currentUser.balance =
+    Number(currentUser.balance) + 1;
 
-  users[currentUser].balance += amount;
+  currentUser.totalEarned =
+    Number(currentUser.totalEarned) + 1;
 
-  saveUsers(users);
+  updateUser(currentUser);
+  updateUI();
 
-  updateBalance();
-
-  addHistory("Task Complete +৳"+amount);
-
-  alert("Task সম্পন্ন হয়েছে! ৳"+amount+" Demo balance-এ যোগ হয়েছে।");
+  alert("Task complete! ৳1.00 যোগ হয়েছে।");
 }
 
-function depositRequest(){
+function showPage(page){
+  document.querySelectorAll(".page").forEach(
+    p => p.classList.add("hidden")
+  );
 
-  const amount=Number(document.getElementById("depositAmount").value);
-  const method=document.getElementById("depositMethod").value;
-  const trx=document.getElementById("transactionId").value.trim();
+  document.getElementById(page).classList.remove("hidden");
 
-  if(amount <= 0 || !trx){
-    
+  document.querySelectorAll("nav button").forEach(
+    b => b.classList.remove("active")
+  );
+
+  const menuMap = {
+    home:"mHome",
+    tasks:"mTasks",
+    earn:"mEarn",
+    deposit:"mDeposit",
+    withdraw:"mWithdraw",
+    profile:"mProfile"
+  };
+
+  if(menuMap[page]){
+    document.getElementById(menuMap[page]).classList.add("active");
+  }
+
+  updateUI();
+}
+
+function submitDeposit(){
+  const method = document.getElementById("depositMethod").value;
+  const amount = Number(document.getElementById("depositAmount").value);
+  const trx = document.getElementById("depositTrx").value.trim();
+  const msg = document.getElementById("depositMsg");
+
+  if(!amount || amount <= 0 || !trx){
+    msg.className = "error";
+    msg.textContent = "Amount এবং Transaction ID দাও।";
+    return;
+  }
+
+  currentUser.deposits.push({
+    method,
+    amount,
+    trx,
+    status:"Pending",
+    date:new Date().toLocaleString()
+  });
+
+  updateUser(currentUser);
+
+  msg.className = "success";
+  msg.textContent = "Deposit request submitted।";
+
+  document.getElementById("depositAmount").value = "";
+  document.getElementById("depositTrx").value = "";
+}
+
+function submitWithdraw(){
+  const method = document.getElementById("withdrawMethod").value;
+  const number = document.getElementById("withdrawNumber").value.trim();
+  const amount = Number(document.getElementById("withdrawAmount").value);
+  const msg = document.getElementById("withdrawMsg");
+
+  if(!number || !amount || amount <= 0){
+    msg.className = "error";
+    msg.textContent = "সব তথ্য সঠিকভাবে দাও।";
+    return;
+  }
+
+  if(amount > Number(currentUser.balance)){
+    msg.className = "error";
+    msg.textContent = "Available balance যথেষ্ট নয়।";
+    return;
+  }
+
+  currentUser.withdrawals.push({
+    method,
+    number,
+    amount,
+    status:"Pending",
+    date:new Date().toLocaleString()
+  });
+
+  currentUser.balance =
+    Number(currentUser.balance) - amount;
+
+  updateUser(currentUser);
+  updateUI();
+
+  msg.className = "success";
+  msg.textContent = "Withdraw request submitted।";
+
+  document.getElementById("withdrawNumber").value = "";
+  document.getElementById("withdrawAmount").value = "";
+}
+
+window.onload = loadCurrentUser;
+</script>
+
+</body>
+</html>
